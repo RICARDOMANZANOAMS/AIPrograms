@@ -5,7 +5,7 @@ class NeuralNetwork(nn.Module):
 
     def __init__(self, inputLayerDim,hiddenLayerDim,outputLayerDim):
         super(NeuralNetwork,self).__init__()
-        self.hidden=nn.Linear(inputlayerDim,hiddenLayerDim)
+        self.hidden=nn.Linear(inputLayerDim,hiddenLayerDim)
         self.output=nn.Linear(hiddenLayerDim,outputLayerDim)
     def forward(self,x):
         x=torch.relu(self.hidden(x))
